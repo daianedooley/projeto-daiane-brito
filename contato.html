@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daiane Brito</title>
+  
+  <!-- CSS EXTERNO -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <header>
+    
+    <!-- BARRA DE NAVEGAÇÃO --> 
+    <nav class="menu">
+<ul>
+<li><a href="index.html">Sobre mim</a></li>
+<li><a href="formacao.html">Formação</a></li>
+<li><a href="portfolio.html">Portfólio</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+  </header>
+
+  <!-- CONTATO — CONTEÚDO --> 
+  <div class="post">
+    <h2>Contato</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- FORMULÁRIO -->
+    <form>
+      <table>
+        <tr>
+          <th><label for="nome">Nome:</label></th>
+          <td><input type="text" name="nome" id="nome"></td>
+        </tr>
+        
+        <tr>
+          <th><label for="email">E-mail:</label></th>
+          <td><input type="email" name="email" id="email"></td>
+        </tr>
+    
+        <tr>
+          <th><label for="msg">Digite sua Mensagem:</label></th>
+          <td><textarea name="msg" id="msg" rows="5" cols="40" placeholder="Digite sua mensagem"></textarea></td>
+        </tr>
+ 
+        <tr>
+          <td></td>
+          <td> <button type="button" onclick="enviarForm()">Enviar</button></td> </tr>
+
+        <!-- A FUNÇÃO enviarForm SERÁ EXECUTADA QUANDO O(A) USUÁRIO(A) CLICAR NO BOTÃO DE ENVIO DO FORMULÁRIO -->
+      </table>
+    </form>
+ 
+  </div>
+  
+  <!-- *** JAVASCRIPT *** -->
+  <script>
+    /* DEFINIÇÃO DE UMA FUNÇÃO */
+    function enviarForm() {
+      
+      /* DURANTE A EXECUÇÃO DESSA FUNÇÃO, OS VALORES DIGITADOS NOS CAMPOS DO FORMULÁRIO SERÃO ARMAZENADOS EM VARIÁVEIS PARA QUE POSSAM SER VALIDADOS */
+      let nome= document.getElementById('nome').value.trim();
+      let email= document.getElementById('email').value.trim();
+      let msg= document.getElementById('msg').value.trim();
+      
+      /* VERIFICAÇÃO DOS CAMPOS */
+      if (nome === "" || email=== "" || msg=== "") {
+        alert('Preencha todos os campos adequadamente');
+        return;
+      }
+    /* LIMPEZA DOS CAMPOS DO FORMULÁRIO */
+    document.getElementById('nome').value= "";
+    document.getElementById('email').value= "";
+    document.getElementById('msg').value= "";
+    
+    /* SE TODOS OS CAMPOS FOREM PRENCHIDOS, O(A) USUÁRIO(A) SERÁ INFORMADO SOBRE O "ENVIO DA MENSAGEM" APÓS CLICAR EM "ENVIAR" */
+    /* OBSERVAÇÃO: TRATA-SE DE UMA SIMULAÇÃO DE ENVIO */
+    alert('Mensagem enviada');
+      
+    }
+
+  </script>
+
+</body>
+</html>

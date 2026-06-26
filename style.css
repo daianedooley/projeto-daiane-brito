@@ -1,0 +1,69 @@
+/* *** ESTILIZAÇÃO *** */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* SE UMA FONTE NÃO ESTIVER DISPONÍVEL, O NAVEGADOR TENTARÁ UTILIZAR A PRÓXIMA DA LISTA */
+  background-color: #000000;
+}
+
+header{
+  padding: 15px;
+  text-align: center;
+}
+
+.menu ul{
+  list-style-type: none; /* O MARCADOR DA LISTA SERÁ REMOVIDO */
+  display: flex;
+  justify-content: center;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  border-width: 1px 2px 3px 4px;
+  border-color: black;
+  border-style: solid;
+  background-color: #FF69B4;
+}
+
+nav {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+header a:link, header a:visited {
+  color: #000000;
+  padding: 16px 24px;
+  text-decoration: none;
+}
+
+header a:hover, header a:active, header a:focus{
+  background-color: #FF1493; /* A COR DE FUNDO DO LINK MUDARÁ PARA UM ROSA MAIS ESCURO QUANDO O CURSOR PASSAR SOBRE ELE, QUANDO ELE ESTIVER SENDO CLICADO OU QUANDO RECEBER FOCO */ 
+}
+
+.post{
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #FF69B4;
+  color:#000000;
+  min-height: 750px;
+  width: 95%;
+}
+
+img { 
+ border-radius: 10px; /* OS CANTOS DAS IMAGENS FICARÃO ARREDONDADOS */
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; /* O FORMULÁRIO SERÁ CENTRALIZADO HORIZONTALMENTE  */
+}
